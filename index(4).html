@@ -1,0 +1,1974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <!-- EDIT: browser tab title -->
+    <title>Happy 2nd Love Anniversary, Ammu</title>
+    <meta name="description" content="A second-anniversary letter for Ammu." />
+    <meta name="theme-color" content="#6b1f2e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ivory: #fbf6ee;
+        --champagne: #ead9ba;
+        --blush: #f2d8d3;
+        --burgundy: #6b1f2e;
+        --wine: #4a1420;
+        --ink: #3b2a2c;
+        --muted: #7a6467;
+        --line: rgba(107, 31, 46, 0.22);
+        --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        --sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--ivory);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-weight: 300;
+        font-size: 1.0625rem;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+        padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--serif);
+        font-weight: 500;
+        line-height: 1.1;
+        color: var(--burgundy);
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 2px solid var(--burgundy);
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+      .wrap {
+        max-width: 62rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      section {
+        padding: clamp(4.5rem, 11vw, 8rem) 0;
+      }
+      .head {
+        text-align: center;
+        margin-bottom: 3.5rem;
+      }
+      .head h2 {
+        font-size: clamp(2.2rem, 6vw, 3.4rem);
+      }
+      .head p {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.25rem;
+        color: var(--muted);
+        margin-top: 0.75rem;
+      }
+      .orn {
+        display: block;
+        width: 120px;
+        height: 14px;
+        margin: 1.25rem auto 0;
+        color: var(--burgundy);
+        opacity: 0.75;
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        position: relative;
+        color: var(--champagne);
+        padding: 4rem 1.5rem;
+        background:
+          radial-gradient(
+            ellipse at 50% 35%,
+            rgba(242, 216, 211, 0.22),
+            transparent 60%
+          ),
+          radial-gradient(ellipse at 50% 120%, #2f0c14, transparent 65%),
+          linear-gradient(170deg, #7a2536, var(--wine) 75%);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: clamp(0.75rem, 2.5vw, 1.75rem);
+        border: 1px solid rgba(234, 217, 186, 0.4);
+        pointer-events: none;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: clamp(1.1rem, 3vw, 2.1rem);
+        border: 1px solid rgba(234, 217, 186, 0.15);
+        pointer-events: none;
+      }
+      .hero-in {
+        max-width: 46rem;
+        position: relative;
+      }
+      .hero .small {
+        font-size: 0.95rem;
+        letter-spacing: 0.14em;
+        color: var(--blush);
+      }
+      .hero h1 {
+        color: #fbf1e2;
+        font-size: clamp(2.6rem, 9.5vw, 5.6rem);
+        font-style: italic;
+        font-weight: 400;
+        margin: 1.5rem 0 1.75rem;
+      }
+      .hero h2 {
+        font-family: var(--sans);
+        font-weight: 300;
+        font-size: clamp(1rem, 2.8vw, 1.25rem);
+        letter-spacing: 0.06em;
+        color: var(--champagne);
+        color: #f0e0c4;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 2.75rem;
+        padding: 0.95rem 2.4rem;
+        border: 1px solid var(--champagne);
+        color: var(--champagne);
+        text-decoration: none;
+        font-size: 0.95rem;
+        letter-spacing: 0.1em;
+        transition:
+          background 0.4s,
+          color 0.4s;
+      }
+      .btn:hover {
+        background: var(--champagne);
+        color: var(--wine);
+      }
+      .hero .heart {
+        width: 22px;
+        height: 22px;
+        color: var(--blush);
+        margin: 0 auto;
+      }
+      /* The one orchestrated moment: hero fades in line by line */
+      .seq > * {
+        opacity: 0;
+        animation: rise 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+      }
+      .seq > :nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .seq > :nth-child(2) {
+        animation-delay: 0.6s;
+      }
+      .seq > :nth-child(3) {
+        animation-delay: 1.2s;
+      }
+      .seq > :nth-child(4) {
+        animation-delay: 1.7s;
+      }
+      .seq > :nth-child(5) {
+        animation-delay: 2.1s;
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* ---------- Timeline ---------- */
+      .tl {
+        position: relative;
+        max-width: 40rem;
+        margin: 0 auto;
+        padding-left: 2.25rem;
+        border-left: 1px solid var(--line);
+      }
+      .tl li {
+        list-style: none;
+        position: relative;
+        padding-bottom: 3rem;
+      }
+      .tl li:last-child {
+        padding-bottom: 0;
+      }
+      .tl li::before {
+        content: "";
+        position: absolute;
+        left: calc(-2.25rem - 5px);
+        top: 0.6rem;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--ivory);
+        border: 1.5px solid var(--burgundy);
+      }
+      .tl time {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.2rem;
+        color: var(--muted);
+      }
+      .tl h3 {
+        font-size: 1.75rem;
+        margin: 0.15rem 0 0.4rem;
+      }
+
+      /* ---------- Gallery ---------- */
+      .gal {
+        background: linear-gradient(var(--ivory), #f6ebe0 50%, var(--ivory));
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.9rem;
+      }
+      @media (min-width: 760px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
+        }
+      }
+      .ph {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 3/4;
+        background: linear-gradient(150deg, var(--blush), var(--champagne));
+        border: 1px solid var(--line);
+        outline: 1px solid rgba(255, 255, 255, 0.7);
+        outline-offset: -8px;
+      }
+      .ph.wide {
+        aspect-ratio: 4/3;
+        grid-column: span 2;
+      }
+      .ph img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.2s ease;
+      }
+      .ph:hover img {
+        transform: scale(1.04);
+      }
+      .ph figcaption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2.5rem 1rem 0.9rem;
+        background: linear-gradient(transparent, rgba(74, 20, 32, 0.65));
+        color: #fff;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.05rem;
+      }
+      .ph .empty {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        color: var(--burgundy);
+        font-family: var(--serif);
+        font-style: italic;
+        padding: 1rem;
+        opacity: 0.8;
+      }
+      .ph .empty svg {
+        width: 20px;
+        height: 20px;
+        margin: 0 auto 0.5rem;
+      }
+      .ph .empty small {
+        font-family: var(--sans);
+        font-style: normal;
+        font-size: 0.75rem;
+        color: var(--muted);
+        margin-top: 0.25rem;
+      }
+
+      /* ---------- Letter ---------- */
+      .letter {
+        max-width: 40rem;
+        margin: 0 auto;
+        background: #fffdf8;
+        padding: clamp(2rem, 7vw, 4.5rem);
+        border: 1px solid var(--line);
+        outline: 1px solid var(--champagne);
+        outline-offset: -10px;
+        box-shadow: 0 30px 60px -40px rgba(74, 20, 32, 0.35);
+      }
+      .letter p {
+        font-family: var(--serif);
+        font-size: 1.3rem;
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
+      }
+      .letter .dear {
+        font-style: italic;
+        color: var(--burgundy);
+        font-size: 1.5rem;
+      }
+      .letter .sign {
+        font-style: italic;
+        color: var(--burgundy);
+        margin: 2rem 0 0;
+        text-align: right;
+      }
+      .note {
+        font-family: var(--sans) !important;
+        font-size: 0.8rem !important;
+        color: var(--muted);
+        letter-spacing: 0.03em;
+      }
+
+      /* ---------- Closing ---------- */
+      .close {
+        text-align: center;
+        background: linear-gradient(170deg, #7a2536, var(--wine));
+        color: var(--champagne);
+      }
+      .close h2 {
+        color: #fbf1e2;
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(2.2rem, 7vw, 4rem);
+        max-width: 38rem;
+        margin: 0 auto 1.25rem;
+      }
+      .close p {
+        max-width: 30rem;
+        margin: 0 auto;
+        color: #f0e0c4;
+      }
+      .close .orn {
+        color: var(--blush);
+        width: 160px;
+        height: auto;
+        margin-top: 2.5rem;
+      }
+      .pulse {
+        animation: beat 3.2s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes beat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.12);
+        }
+      }
+      footer {
+        text-align: center;
+        padding: 1.75rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+        background: var(--wine);
+        color: rgba(234, 217, 186, 0.6);
+      }
+
+      /* ---------- Scroll reveal (subtle) ---------- */
+      .js .rv {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+          opacity 1s ease,
+          transform 1s ease;
+      }
+      .js .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .seq > *,
+        .js .rv {
+          opacity: 1 !important;
+          transform: none !important;
+          animation: none !important;
+          transition: none !important;
+        }
+        .pulse {
+          animation: none;
+        }
+        .ph:hover img {
+          transform: none;
+        }
+      }
+      /* ===== v2: photo hero, glass, interactions ===== */
+      :root {
+        --hero-pos: 30% 50%;
+      } /* EDIT: focal point of the hero photo */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            40rem 30rem at 8% 18%,
+            rgba(242, 216, 211, 0.95),
+            transparent 60%
+          ),
+          radial-gradient(
+            36rem 30rem at 92% 55%,
+            rgba(234, 217, 186, 0.95),
+            transparent 60%
+          ),
+          radial-gradient(
+            30rem 26rem at 25% 95%,
+            rgba(196, 106, 118, 0.28),
+            transparent 60%
+          );
+      }
+      .gal {
+        background: none;
+      }
+      /* glass (with Safari prefix) */
+      .nav,
+      .tl li,
+      .letter,
+      .hero-in,
+      .close .wrap,
+      .lb .b {
+        -webkit-backdrop-filter: blur(18px) saturate(1.5);
+        backdrop-filter: blur(18px) saturate(1.5);
+      }
+
+      /* hero: full-viewport landscape photo */
+      .hero {
+        overflow: hidden;
+        place-items: end center;
+        padding: 4rem 1.25rem clamp(3.5rem, 10vh, 6.5rem);
+      }
+      .hero::before,
+      .hero::after {
+        z-index: 2;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(40, 8, 16, 0.25),
+            rgba(40, 8, 16, 0.05) 35%,
+            rgba(40, 8, 16, 0.75)
+          ),
+          url(photos/IMG_2315.jpg) var(--hero-pos) / cover no-repeat,
+          linear-gradient(170deg, #7a2536, var(--wine) 75%);
+        animation: kb 26s ease-out forwards;
+      }
+      @keyframes kb {
+        from {
+          transform: scale(1.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      .glow {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: radial-gradient(
+          circle 15rem at var(--mx, 50%) var(--my, 40%),
+          rgba(255, 236, 214, 0.28),
+          transparent 70%
+        );
+        mix-blend-mode: soft-light;
+      }
+      .hero-in {
+        z-index: 3;
+        width: 100%;
+        max-width: 38rem;
+        padding: 2rem 1.5rem 2.25rem;
+        background: rgba(74, 20, 32, 0.32);
+        border: 1px solid rgba(255, 240, 225, 0.38);
+        box-shadow:
+          0 30px 60px -30px rgba(20, 4, 8, 0.7),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        transform: perspective(900px) rotateX(var(--ry, 0deg))
+          rotateY(var(--rx, 0deg));
+        transition: transform 0.4s ease-out;
+      }
+      .hero h1 {
+        font-size: clamp(2.1rem, 7.5vw, 4.2rem);
+        margin: 1rem 0 1.1rem;
+        text-shadow: 0 2px 24px rgba(20, 4, 8, 0.45);
+      }
+      .btn {
+        margin-top: 1.75rem;
+        background: rgba(255, 248, 238, 0.14);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+      }
+      .btn:active {
+        transform: scale(0.97);
+      }
+
+      /* top progress bar + glass nav */
+      .prog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        z-index: 60;
+        background: linear-gradient(90deg, var(--blush), var(--burgundy));
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      .nav {
+        position: fixed;
+        top: calc(env(safe-area-inset-top) + 0.75rem);
+        left: 50%;
+        z-index: 50;
+        display: flex;
+        padding: 0.3rem;
+        border-radius: 999px;
+        background: rgba(255, 250, 243, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        box-shadow: 0 10px 30px -12px rgba(74, 20, 32, 0.4);
+        transform: translate(-50%, -160%);
+        visibility: hidden;
+        transition:
+          transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+          visibility 0s 0.6s;
+      }
+      .nav.show {
+        transform: translate(-50%, 0);
+        visibility: visible;
+        transition-delay: 0s;
+      }
+      .nav a {
+        padding: 0.45rem 0.85rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        color: var(--burgundy);
+        transition: background 0.3s;
+      }
+      .nav a:hover {
+        background: var(--blush);
+      }
+
+      /* timeline cards */
+      .tl {
+        border-left-color: transparent;
+        background: linear-gradient(var(--line), var(--line)) 0 0/1px 100%
+          no-repeat;
+      }
+      .tl li {
+        padding: 1.4rem 1.5rem;
+        margin-bottom: 1.25rem;
+        background: rgba(255, 253, 248, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 18px 40px -28px rgba(74, 20, 32, 0.45);
+        transition:
+          transform 0.5s ease,
+          box-shadow 0.5s ease,
+          background 0.5s;
+      }
+      .tl li:last-child {
+        padding-bottom: 1.4rem;
+        margin-bottom: 0;
+      }
+      .tl li::before {
+        top: 1.9rem;
+        transition:
+          background 0.4s,
+          transform 0.4s;
+      }
+      .tl li:hover {
+        transform: translateX(6px);
+        background: rgba(255, 253, 248, 0.75);
+        box-shadow: 0 24px 44px -24px rgba(107, 31, 46, 0.5);
+      }
+      .tl li:hover::before {
+        background: var(--burgundy);
+        transform: scale(1.4);
+      }
+
+      /* gallery */
+      .ph {
+        cursor: default;
+        transition:
+          transform 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+      .ph:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 24px 40px -24px rgba(74, 20, 32, 0.55);
+      }
+      .ph[role="button"] {
+        cursor: zoom-in;
+      }
+      .ph figcaption {
+        background: rgba(74, 20, 32, 0.35);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 0.7rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      @media (hover: hover) {
+        .ph figcaption {
+          transform: translateY(100%);
+          transition: transform 0.5s ease;
+        }
+        .ph:hover figcaption,
+        .ph:focus-visible figcaption {
+          transform: none;
+        }
+      }
+
+      /* letter */
+      .lbtn {
+        display: none;
+        margin: 0 auto 2rem;
+        padding: 0.95rem 2.4rem;
+        font: inherit;
+        font-size: 0.95rem;
+        letter-spacing: 0.1em;
+        color: var(--burgundy);
+        background: rgba(255, 253, 248, 0.55);
+        border: 1px solid var(--burgundy);
+        cursor: pointer;
+        transition:
+          background 0.4s,
+          color 0.4s,
+          transform 0.2s;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+      .lbtn:hover {
+        background: var(--burgundy);
+        color: var(--champagne);
+      }
+      .lbtn:active {
+        transform: scale(0.97);
+      }
+      .lj .lbtn {
+        display: block;
+      }
+      .lj .lw {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.9s ease;
+      }
+      .lj .lw.open {
+        grid-template-rows: 1fr;
+      }
+      .lwi {
+        overflow: hidden;
+        min-height: 0;
+      }
+      .lj .lw:not(.open) .lwi {
+        visibility: hidden;
+        transition: visibility 0s 0.9s;
+      }
+      .letter {
+        background: rgba(255, 253, 248, 0.6);
+        border-color: rgba(255, 255, 255, 0.85);
+      }
+
+      /* closing */
+      .close {
+        background:
+          radial-gradient(
+            30rem 20rem at 18% 18%,
+            rgba(242, 216, 211, 0.28),
+            transparent 60%
+          ),
+          radial-gradient(
+            28rem 22rem at 85% 85%,
+            rgba(234, 217, 186, 0.22),
+            transparent 60%
+          ),
+          linear-gradient(170deg, #7a2536, var(--wine));
+      }
+      .close .wrap {
+        max-width: 42rem;
+        padding: 3.25rem 1.5rem;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(234, 217, 186, 0.35);
+      }
+      .close .orn {
+        cursor: pointer;
+      }
+
+      /* floating hearts */
+      .fh {
+        position: fixed;
+        z-index: 99;
+        pointer-events: none;
+        line-height: 1;
+      }
+
+      /* lightbox */
+      .lb {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+        background: rgba(40, 8, 16, 0.6);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+      }
+      .lb[hidden] {
+        display: none;
+      }
+      .lb figure {
+        max-width: min(92vw, 60rem);
+        text-align: center;
+        color: #fbf1e2;
+      }
+      .lb img {
+        max-width: 100%;
+        max-height: 78vh;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 30px 80px -20px #000;
+      }
+      .lb figcaption {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.2rem;
+        margin-top: 0.75rem;
+      }
+      .lb .b {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        background: rgba(255, 255, 255, 0.14);
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .lb .b:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .lb .lbx {
+        top: 1rem;
+        right: 1rem;
+      }
+      .lb .lbp {
+        left: 0.75rem;
+        top: 50%;
+      }
+      .lb .lbn {
+        right: 0.75rem;
+        top: 50%;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-bg {
+          animation: none;
+        }
+        .hero-in {
+          transition: none;
+          transform: none;
+        }
+        .tl li:hover,
+        .ph:hover {
+          transform: none;
+        }
+        .lj .lw {
+          transition: none;
+        }
+        .prog {
+          display: none;
+        }
+      }
+      /* ===== v3: counter, tools, deck, quiz, hold heart ===== */
+      .cnt {
+        padding-bottom: 0;
+      }
+      .cn {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        max-width: 40rem;
+        margin: 0 auto;
+      }
+      @media (min-width: 720px) {
+        .cn {
+          grid-template-columns: repeat(6, 1fr);
+          max-width: 52rem;
+        }
+      }
+      .cn > div {
+        text-align: center;
+        padding: 1.1rem 0.25rem;
+        background: rgba(255, 253, 248, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        box-shadow: 0 18px 40px -28px rgba(74, 20, 32, 0.45);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        transition: transform 0.4s;
+      }
+      .cn > div:hover {
+        transform: translateY(-4px);
+      }
+      .cn b {
+        display: block;
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(1.9rem, 6vw, 2.6rem);
+        line-height: 1;
+        color: var(--burgundy);
+        font-variant-numeric: tabular-nums;
+      }
+      .cn span {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .grid {
+        grid-auto-flow: dense;
+      }
+      .tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        align-items: center;
+        justify-content: center;
+        margin: -1.5rem 0 2rem;
+      }
+      .tools button,
+      .qopt,
+      .qnext {
+        font: inherit;
+        font-size: 0.92rem;
+        letter-spacing: 0.06em;
+        color: var(--burgundy);
+        background: rgba(255, 253, 248, 0.55);
+        border: 1px solid var(--line);
+        padding: 0.6rem 1.3rem;
+        border-radius: 999px;
+        cursor: pointer;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        transition:
+          background 0.3s,
+          color 0.3s,
+          transform 0.2s;
+      }
+      .tools button:hover,
+      .qnext:hover {
+        background: var(--burgundy);
+        color: var(--champagne);
+      }
+      .tools button:active,
+      .qopt:active,
+      .qnext:active {
+        transform: scale(0.97);
+      }
+      #gmsg {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      /* reasons deck */
+      .deck {
+        display: block;
+        width: 100%;
+        max-width: 26rem;
+        min-height: 17rem;
+        margin: 0 auto;
+        padding: 2.5rem 1.75rem;
+        font: inherit;
+        text-align: center;
+        cursor: pointer;
+        color: var(--ink);
+        background: linear-gradient(
+          150deg,
+          rgba(255, 255, 255, 0.75),
+          rgba(242, 216, 211, 0.55)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        outline: 1px solid var(--champagne);
+        outline-offset: -10px;
+        box-shadow: 0 30px 60px -36px rgba(74, 20, 32, 0.55);
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+        transition: box-shadow 0.4s;
+      }
+      .deck:hover {
+        box-shadow: 0 36px 70px -34px rgba(107, 31, 46, 0.6);
+      }
+      .dk-n {
+        display: block;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.2rem;
+        color: var(--muted);
+      }
+      .dk-t {
+        display: block;
+        font-family: var(--serif);
+        font-size: 1.7rem;
+        line-height: 1.35;
+        color: var(--burgundy);
+        margin: 1.25rem 0 1.5rem;
+      }
+      .dk-h {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      /* quiz */
+      .quiz {
+        max-width: 36rem;
+        margin: 0 auto;
+        padding: clamp(1.5rem, 5vw, 2.5rem);
+        background: rgba(255, 253, 248, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        box-shadow: 0 30px 60px -40px rgba(74, 20, 32, 0.4);
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+      }
+      .qm {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      .qq {
+        font-family: var(--serif);
+        font-size: 1.7rem;
+        line-height: 1.25;
+        color: var(--burgundy);
+        margin: 0.4rem 0 1.25rem;
+      }
+      .qopt {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.6rem;
+        border-radius: 14px;
+        font-size: 1rem;
+        letter-spacing: 0;
+      }
+      .qopt:hover:not(:disabled) {
+        background: var(--blush);
+      }
+      .qopt.ok {
+        background: #e7efe0;
+        border-color: #7d9a6c;
+        color: #33512a;
+      }
+      .qopt.no {
+        background: #f5dcdc;
+        border-color: #c77;
+        color: #7a2530;
+      }
+      .qopt:disabled {
+        cursor: default;
+      }
+      .qn {
+        margin: 0.75rem 0;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.15rem;
+        color: var(--muted);
+        min-height: 1.5em;
+      }
+      .qres {
+        text-align: center;
+      }
+      .qres .big {
+        font-family: var(--serif);
+        font-size: 3.2rem;
+        color: var(--burgundy);
+      }
+      /* hold heart */
+      .hold {
+        display: grid;
+        place-items: center;
+        width: 5.5rem;
+        height: 5.5rem;
+        margin: 2.25rem auto 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(234, 217, 186, 0.5);
+        cursor: pointer;
+        color: var(--champagne);
+        touch-action: none;
+        background: conic-gradient(
+          var(--blush) calc(var(--p, 0) * 360deg),
+          rgba(255, 255, 255, 0.1) 0
+        );
+        transition: transform 0.2s;
+      }
+      .hold svg {
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        filter: drop-shadow(0 0 6px rgba(20, 4, 8, 0.5));
+      }
+      .hold:active,
+      .hold.on {
+        transform: scale(1.08);
+      }
+      .hh {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.3rem;
+        color: #f0e0c4;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cn > div:hover {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Reusable SVG pieces -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="heart" viewBox="0 0 24 24">
+        <path
+          d="M12 21s-7.5-4.8-9.6-9.6C.9 7.9 3.2 4.5 6.6 4.5c2 0 3.6 1.1 5.4 3 1.8-1.9 3.4-3 5.4-3 3.400 0 5.700 3.400 4.200 6.900C19.500 16.200 12 21 12 21z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.3"
+          stroke-linejoin="round"
+        />
+      </symbol>
+    </svg>
+
+    <div class="prog" id="prog" aria-hidden="true"></div>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#story">Story</a><a href="#gallery">Photos</a
+      ><a href="#reasons">Reasons</a><a href="#quiz">Quiz</a
+      ><a href="#letter">Letter</a>
+    </nav>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <header class="hero" id="top">
+        <!--
+    EDIT HERO PHOTO: save your landscape photo as photos/hero.jpg (about 2000px wide, under 400 KB).
+    To keep faces in frame on phones, change --hero-pos in the CSS (e.g. "50% 30%" or "30% 50%").
+  -->
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="glow" aria-hidden="true"></div>
+        <div class="hero-in seq">
+          <svg class="heart" aria-hidden="true"><use href="#heart" /></svg>
+          <!-- EDIT: small line above the headline -->
+          <p class="small">Ammu &amp; me, two years on</p>
+          <!-- EDIT: main headline -->
+          <h1>Two years, and I’d still choose you.</h1>
+          <!-- EDIT: subtitle -->
+          <h2>Happy 2nd Love Anniversary, Ammu</h2>
+          <!-- EDIT: button text; the link points to the timeline section -->
+          <a class="btn" href="#story">Our story</a>
+        </div>
+      </header>
+
+      <!-- ============ LIVE COUNTER ============ -->
+      <!-- EDIT: the date is set in the script at the bottom (START_DATE). -->
+      <section class="cnt">
+        <div class="wrap">
+          <div class="head rv">
+            <h2>Together for</h2>
+            <p id="cnthint">Every second counts</p>
+          </div>
+          <div class="cn rv" id="cn" role="timer" aria-label="Time together">
+            <div><b data-u="y">--</b><span>years</span></div>
+            <div><b data-u="m">--</b><span>months</span></div>
+            <div><b data-u="d">--</b><span>days</span></div>
+            <div><b data-u="h">--</b><span>hours</span></div>
+            <div><b data-u="i">--</b><span>minutes</span></div>
+            <div><b data-u="s">--</b><span>seconds</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TIMELINE ============ -->
+      <section id="story">
+        <div class="wrap">
+          <div class="head rv">
+            <!-- EDIT: section title and subtitle -->
+            <h2>Our story</h2>
+            <p>A few moments I keep close</p>
+            <svg class="orn" viewBox="0 0 120 14" aria-hidden="true">
+              <path
+                d="M0 7h48M72 7h48"
+                stroke="currentColor"
+                stroke-width=".8"
+              />
+              <use href="#heart" x="50" y="0" width="20" height="14" />
+            </svg>
+          </div>
+
+          <!--
+      EDIT THE TIMELINE: each <li> is one memory.
+      Change the <time>, the <h3> title and the <p> text. Copy a whole <li> to add more, delete one to remove it.
+      All text below is placeholder — nothing here is a real date or memory.
+    -->
+          <ol class="tl">
+            <li class="rv">
+              <time>August 2024</time>
+              <h3>We first met on FF</h3>
+              <p>A moment on FF became the beginning of our story.</p>
+            </li>
+            <li class="rv">
+              <time>September 3, 2024</time>
+              <h3>I proposed to you</h3>
+              <p>
+                I asked you to take that next step with me, and our story grew
+                even more special.
+              </p>
+            </li>
+            <li class="rv">
+              <time>September 28, 2024</time>
+              <h3>We shared more of ourselves</h3>
+              <p>
+                We opened up to each other and made our connection even closer.
+              </p>
+            </li>
+            <li class="rv">
+              <time>October 2, 2024</time>
+              <h3>You proposed to me</h3>
+              <p>
+                You gave me a moment I’ll always hold close—and another
+                beautiful chapter in our story.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ GALLERY ============ -->
+      <section class="gal" id="gallery">
+        <div class="wrap">
+          <div class="head rv">
+            <!-- EDIT: section title and subtitle -->
+            <h2>Little frames of us</h2>
+            <p>Pictures worth keeping</p>
+          </div>
+
+          <!--
+      EDIT PHOTOS: put your pictures in the "photos" folder next to index.html,
+      then make each src match the file name (e.g. photos/photo-1.jpg).
+      Edit the alt text (describes the photo for screen readers) and the figcaption (shown on the photo).
+      If a file is missing, the placeholder shows instead. Add or remove <figure> blocks freely.
+      Tip: resize photos to about 1200px wide to keep the page fast.
+    -->
+          <div class="tools rv">
+            <button type="button" id="shuf">Shuffle</button>
+            <button type="button" id="play">Play slideshow</button>
+            <span id="gmsg" role="status"></span>
+          </div>
+          <div class="grid">
+            <figure class="ph wide rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Your
+                favourite photo of us<small
+                  >Replace with photos/photo-1.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo1.jpg"
+                alt="[Describe photo 1]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 2<small
+                  >photos/photo-2.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo2.jpg"
+                alt="[Describe photo 2]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 3<small
+                  >photos/photo-3.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo3.jpg"
+                alt="[Describe photo 3]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 4<small
+                  >photos/photo-4.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo4.jpg"
+                alt="[Describe photo 4]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 5<small
+                  >photos/photo-5.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo5.jpg"
+                alt="[Describe photo 5]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph wide rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 6<small
+                  >photos/photo-6.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo6.jpg"
+                alt="[Describe photo 6]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <!-- More photos: photos/photo-7.jpg to photo-10.jpg. Copy a <figure> to add more. -->
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 7<small
+                  >photos/photo-7.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo7.jpg"
+                alt="[Describe photo 7]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 8<small
+                  >photos/photo-8.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo8.jpg"
+                alt="[Describe photo 8]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo 9<small
+                  >photos/photo-9.jpg</small
+                >
+              </div>
+              <img
+                src="photos/photo9.jpg"
+                alt="[Describe photo 9]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+            <figure class="ph rv">
+              <div class="empty">
+                <svg aria-hidden="true"><use href="#heart" /></svg>Photo
+                10<small>photos/photo-10.jpg</small>
+              </div>
+              <img
+                src="photos/photo10.jpg"
+                alt="[Describe photo 10]"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+              <figcaption>[Add caption]</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REASONS DECK ============ -->
+      <!-- EDIT: the reasons themselves are in the script (REASONS list). -->
+      <section id="reasons">
+        <div class="wrap">
+          <div class="head rv">
+            <h2>Reasons I love you</h2>
+            <p>Tap the card for another</p>
+          </div>
+          <button class="deck rv" id="deck" type="button" aria-live="polite">
+            <span class="dk-n" id="dkn"></span
+            ><span class="dk-t" id="dkt"></span
+            ><span class="dk-h">Tap for the next one</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============ Q&A QUIZ ============ -->
+      <!-- EDIT: questions and answers are in the script (QUIZ list). -->
+      <section id="quiz">
+        <div class="wrap">
+          <div class="head rv">
+            <h2>How well do you know us?</h2>
+            <p>A little quiz, just for Ammu</p>
+          </div>
+          <div class="quiz rv" id="quizbox"></div>
+        </div>
+      </section>
+
+      <!-- ============ LETTER ============ -->
+      <section id="letter">
+        <div class="wrap">
+          <div class="head rv">
+            <h2>A letter for you</h2>
+            <p>A few words from my heart</p>
+          </div>
+
+          <button
+            class="lbtn rv"
+            id="lbtn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="lw"
+          >
+            Open my letter
+          </button>
+
+          <div class="lw" id="lw">
+            <div class="lwi">
+              <article class="letter">
+                <p class="dear">My dearest Ammu,</p>
+                <p>
+                  I still smile when I think about how we first met on FF in
+                  August 2024. I never knew that moment would become the
+                  beginning of such a special story.
+                </p>
+                <p>
+                  I’ll always hold close September 3, when I proposed to you,
+                  and September 28, when we shared more of ourselves with each
+                  other. Then, on October 2, you surprised me by proposing to
+                  me. Those moments are part of our story, and I’m so grateful
+                  they’re ours.
+                </p>
+                <p>
+                  Happy 2nd Love Anniversary, Ammu. Thank you for sharing these
+                  two years with me. I love you, and I look forward to all the
+                  memories still waiting for us.
+                </p>
+                <p class="sign">Always yours</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- ============ CLOSING WISH ============ -->
+<section class="close">
+  <div class="wrap rv">
+    <h2>Happy 2nd Love Anniversary, Ammu.</h2>
+    <p>
+      From our first meeting on FF to the moment you proposed to me, I’m
+      grateful for every chapter of our story. Here’s to all that’s still ahead.
+    </p>
+    <button
+      class="hold"
+      id="hold"
+      type="button"
+      aria-label="Press and hold to send love"
+    >
+      <svg aria-hidden="true"><use href="#heart" /></svg>
+    </button>
+    <p class="hh" id="hh" role="status">Press and hold the heart</p>
+    <svg class="orn" viewBox="0 0 160 24" aria-hidden="true">
+      <path
+        d="M0 12h62M98 12h62"
+        stroke="currentColor"
+        stroke-width=".8"
+      />
+      <g class="pulse" style="transform-box: fill-box">
+        <use href="#heart" x="68" y="0" width="24" height="24" />
+      </g>
+    </svg>
+  </div>
+</section>
+
+<footer>For Ammu · 2024–∞</footer>
+
+    <script>
+      /* Scroll reveal. Remove this script and the page still works: content just shows without animation. */
+      (function () {
+        var d = document.documentElement;
+        if (
+          !("IntersectionObserver" in window) ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+          return;
+        d.classList.add("js");
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+        document.querySelectorAll(".rv").forEach(function (el) {
+          io.observe(el);
+        });
+      })();
+      /* Music: intentionally left out (no autoplay). To add later, place an <audio controls src="music/song.mp3"> in the closing section. */
+    </script>
+    <!-- Photo viewer (opens when a gallery photo is clicked) -->
+    <div
+      class="lb"
+      id="lb"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photo viewer"
+    >
+      <button class="b lbx" type="button" aria-label="Close photo">
+        &times;
+      </button>
+      <button class="b lbp" type="button" aria-label="Previous photo">
+        &lsaquo;
+      </button>
+      <button class="b lbn" type="button" aria-label="Next photo">
+        &rsaquo;
+      </button>
+      <figure>
+        <img alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <script>
+      /* Interactions: hero tilt + glow, scroll progress, nav, heart bursts, letter toggle, photo viewer.
+   Safe to delete any block you don't want. */
+      (function () {
+        var rm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        function $(s, r) {
+          return (r || document).querySelector(s);
+        }
+        function $$(s) {
+          return [].slice.call(document.querySelectorAll(s));
+        }
+        var hero = $(".hero"),
+          panel = $(".hero-in"),
+          prog = $("#prog"),
+          nav = $("#nav");
+
+        /* scroll progress + nav */
+        function onScroll() {
+          var m = document.documentElement.scrollHeight - innerHeight;
+          prog.style.transform = "scaleX(" + (m > 0 ? scrollY / m : 0) + ")";
+          nav.classList.toggle("show", scrollY > innerHeight * 0.6);
+        }
+        addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        /* hero glow follows pointer/finger; panel tilts on mouse */
+        hero.addEventListener("pointermove", function (e) {
+          var r = hero.getBoundingClientRect(),
+            x = (e.clientX - r.left) / r.width,
+            y = (e.clientY - r.top) / r.height;
+          hero.style.setProperty("--mx", x * 100 + "%");
+          hero.style.setProperty("--my", y * 100 + "%");
+          if (!rm && e.pointerType === "mouse") {
+            panel.style.setProperty("--rx", (x - 0.5) * 6 + "deg");
+            panel.style.setProperty("--ry", (0.5 - y) * 6 + "deg");
+          }
+        });
+        hero.addEventListener("pointerleave", function () {
+          panel.style.setProperty("--rx", "0deg");
+          panel.style.setProperty("--ry", "0deg");
+        });
+
+        /* tap/click anywhere: little hearts float up */
+        function one(x, i) {
+          var s = document.createElement("span");
+          s.className = "fh";
+          s.textContent = "\u2665";
+          s.setAttribute("aria-hidden", "true");
+          s.style.cssText =
+            "left:" +
+            x[0] +
+            "px;top:" +
+            x[1] +
+            "px;font-size:" +
+            (12 + Math.random() * 14) +
+            "px;color:" +
+            (i % 2 ? "#c9707c" : "#6b1f2e");
+          document.body.appendChild(s);
+          var dx = (Math.random() - 0.5) * 120,
+            a = s.animate(
+              [
+                { transform: "translate(-50%,-50%)", opacity: 1 },
+                {
+                  transform:
+                    "translate(calc(-50% + " +
+                    dx +
+                    "px),-" +
+                    (70 + Math.random() * 80) +
+                    "px) scale(.6)",
+                  opacity: 0,
+                },
+              ],
+              { duration: 1300 + Math.random() * 700, easing: "ease-out" },
+            );
+          a.onfinish = function () {
+            s.remove();
+          };
+        }
+        document.addEventListener("click", function (e) {
+          if (rm || !e.detail || e.target.closest(".lb")) return;
+          for (var i = 0; i < 7; i++) one([e.clientX, e.clientY], i);
+        });
+
+        /* letter: open / fold */
+        var lw = $("#lw"),
+          lbtn = $("#lbtn");
+        document.documentElement.classList.add("lj");
+        lbtn.addEventListener("click", function () {
+          var o = lw.classList.toggle("open");
+          lbtn.setAttribute("aria-expanded", o);
+          lbtn.textContent = o ? "Fold the letter" : "Open my letter";
+        });
+
+        /* photo viewer (only photos that actually exist) */
+        var lb = $("#lb"),
+          limg = $("img", lb),
+          lcap = $("figcaption", lb),
+          items = [],
+          idx = 0,
+          last;
+        function show(i) {
+          idx = (i + items.length) % items.length;
+          var f = items[idx],
+            im = $("img", f);
+          limg.src = im.currentSrc || im.src;
+          limg.alt = im.alt;
+          lcap.textContent = $("figcaption", f).textContent;
+        }
+        function openLb(f) {
+          items = $$(".ph").filter(function (p) {
+            return $("img", p);
+          });
+          show(items.indexOf(f));
+          lb.hidden = false;
+          document.body.style.overflow = "hidden";
+          last = document.activeElement;
+          $(".lbx", lb).focus();
+        }
+        function closeLb() {
+          lb.hidden = true;
+          document.body.style.overflow = "";
+          if (last) last.focus();
+        }
+        addEventListener("load", function () {
+          $$(".ph").forEach(function (f) {
+            if (!$("img", f)) return;
+            f.setAttribute("tabindex", "0");
+            f.setAttribute("role", "button");
+            f.setAttribute("aria-label", "Open photo larger");
+            f.addEventListener("click", function () {
+              openLb(f);
+            });
+            f.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openLb(f);
+              }
+            });
+          });
+        });
+        $(".lbx", lb).onclick = closeLb;
+        $(".lbp", lb).onclick = function () {
+          show(idx - 1);
+        };
+        $(".lbn", lb).onclick = function () {
+          show(idx + 1);
+        };
+        lb.addEventListener("click", function (e) {
+          if (e.target === lb) closeLb();
+        });
+        addEventListener("keydown", function (e) {
+          if (lb.hidden) return;
+          if (e.key === "Escape") closeLb();
+          if (e.key === "ArrowLeft") show(idx - 1);
+          if (e.key === "ArrowRight") show(idx + 1);
+        });
+      })();
+    </script>
+
+    <script>
+      /* ================= EDIT YOUR CONTENT HERE ================= */
+      var START_DATE = "2024-10-02"; // EDIT: the day you got together, as "YYYY-MM-DD". Leave empty and the counter shows dashes.
+      var REASONS = [
+        "Because meeting you on FF began a story I treasure.",
+        "Because I got to ask you to take this journey with me on September 3, 2024.",
+        "Because we shared more of ourselves and grew closer on September 28, 2024.",
+        "Because you made October 2, 2024 unforgettable when you proposed to me.",
+        "Because after two years, you’re still the one I’d choose.",
+      ];
+      var QUIZ = [
+        {
+          q: "Where did we first meet?",
+          a: ["On FF", "At a café", "Through a friend"],
+          c: 0,
+          n: "We first met on FF in August 2024—the beginning of our story.",
+        },
+        {
+          q: "When did I propose to you?",
+          a: ["September 3, 2024", "September 28, 2024", "October 2, 2024"],
+          c: 0,
+          n: "September 3, 2024—the day I asked you to take this journey with me.",
+        },
+        {
+          q: "When did you propose to me?",
+          a: ["September 3, 2024", "September 28, 2024", "October 2, 2024"],
+          c: 2,
+          n: "October 2, 2024—you made our story even more special by proposing to me.",
+        },
+      ];
+      var QUIZ_RESULT =
+        "No matter how many answers you got right, my favorite part of our story is living it with you. Happy 2nd Love Anniversary, Ammu!";
+
+      var HOLD_MESSAGE =
+        "Ammu, from our first meeting on FF to the way we’ve both chosen each other, these two years have become my favorite chapter. Thank you for sharing this beautiful story with me. I love you, and I’ll keep choosing you, today and always.";
+      /* =========================================================== */
+
+      (function () {
+        var rm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        function $(s, r) {
+          return (r || document).querySelector(s);
+        }
+        function $$(s) {
+          return [].slice.call(document.querySelectorAll(s));
+        }
+        function hearts(n, cx, cy, spread) {
+          if (rm) return;
+          for (var i = 0; i < n; i++)
+            (function (i) {
+              var s = document.createElement("span");
+              s.className = "fh";
+              s.textContent = "\u2665";
+              s.setAttribute("aria-hidden", "true");
+              var x = cx + (Math.random() - 0.5) * spread;
+              s.style.cssText =
+                "left:" +
+                x +
+                "px;top:" +
+                cy +
+                "px;font-size:" +
+                (14 + Math.random() * 20) +
+                "px;color:" +
+                (i % 2 ? "#c9707c" : "#f2d8d3");
+              document.body.appendChild(s);
+              s.animate(
+                [
+                  { transform: "translate(-50%,0)", opacity: 1 },
+                  {
+                    transform:
+                      "translate(calc(-50% + " +
+                      (Math.random() - 0.5) * 140 +
+                      "px),-" +
+                      (160 + Math.random() * 260) +
+                      "px) scale(.6)",
+                    opacity: 0,
+                  },
+                ],
+                { duration: 1800 + Math.random() * 1400, easing: "ease-out" },
+              ).onfinish = function () {
+                s.remove();
+              };
+            })(i);
+        }
+
+        /* --- live counter --- */
+        var cn = $("#cn"),
+          st = START_DATE && new Date(START_DATE + "T00:00:00");
+        function set(u, v) {
+          $("[data-u=" + u + "]", cn).textContent = v;
+        }
+        if (st && !isNaN(st)) {
+          $("#cnthint").textContent =
+            "Since " +
+            st.toLocaleDateString(undefined, {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            });
+          (function tick() {
+            var n = new Date(),
+              mo =
+                (n.getFullYear() - st.getFullYear()) * 12 +
+                n.getMonth() -
+                st.getMonth(),
+              a = new Date(st.getFullYear(), st.getMonth() + mo, st.getDate());
+            if (a > n) {
+              mo--;
+              a = new Date(st.getFullYear(), st.getMonth() + mo, st.getDate());
+            }
+            var ms = n - a;
+            set("y", Math.floor(mo / 12));
+            set("m", mo % 12);
+            set("d", Math.floor(ms / 864e5));
+            set("h", Math.floor((ms % 864e5) / 36e5));
+            set("i", Math.floor((ms % 36e5) / 6e4));
+            set("s", Math.floor((ms % 6e4) / 1e3));
+            setTimeout(tick, 1000);
+          })();
+        } else
+          $("#cnthint").textContent =
+            "Add START_DATE in the script to start the clock";
+
+        /* --- reasons deck --- */
+        var deck = $("#deck"),
+          di = -1;
+        function card() {
+          di = (di + 1) % REASONS.length;
+          $("#dkn").textContent =
+            "Reason " + (di + 1) + " of " + REASONS.length;
+          $("#dkt").textContent = REASONS[di];
+        }
+        card();
+        deck.addEventListener("click", function () {
+          if (rm) {
+            card();
+            return;
+          }
+          deck.animate(
+            [{ transform: "rotateY(0)" }, { transform: "rotateY(90deg)" }],
+            { duration: 260, easing: "ease-in" },
+          ).onfinish = function () {
+            card();
+            deck.animate(
+              [{ transform: "rotateY(-90deg)" }, { transform: "rotateY(0)" }],
+              { duration: 260, easing: "ease-out" },
+            );
+          };
+        });
+
+        /* --- quiz --- */
+        var qb = $("#quizbox"),
+          qi = 0,
+          score = 0;
+        function esc(t) {
+          var d = document.createElement("div");
+          d.textContent = t;
+          return d.innerHTML;
+        }
+        function ask() {
+          if (qi >= QUIZ.length) {
+            qb.innerHTML =
+              '<div class="qres"><p class="big">' +
+              score +
+              " / " +
+              QUIZ.length +
+              '</p><p class="qn">' +
+              esc(QUIZ_RESULT) +
+              '</p><button class="qnext" type="button">Play again</button></div>';
+            $(".qnext", qb).onclick = function () {
+              qi = 0;
+              score = 0;
+              ask();
+            };
+            if (score === QUIZ.length)
+              hearts(
+                18,
+                qb.getBoundingClientRect().left + qb.offsetWidth / 2,
+                qb.getBoundingClientRect().bottom,
+                qb.offsetWidth,
+              );
+            return;
+          }
+          var q = QUIZ[qi];
+          qb.innerHTML =
+            '<p class="qm">Question ' +
+            (qi + 1) +
+            " of " +
+            QUIZ.length +
+            '</p><h3 class="qq">' +
+            esc(q.q) +
+            "</h3>" +
+            q.a
+              .map(function (a, i) {
+                return (
+                  '<button class="qopt" type="button" data-i="' +
+                  i +
+                  '">' +
+                  esc(a) +
+                  "</button>"
+                );
+              })
+              .join("") +
+            '<p class="qn" role="status"></p><button class="qnext" type="button" hidden>' +
+            (qi === QUIZ.length - 1 ? "See result" : "Next question") +
+            "</button>";
+          $$(".qopt").forEach(function (b) {
+            b.onclick = function () {
+              var i = +b.dataset.i,
+                ok = i === q.c;
+              if (ok) score++;
+              $$(".qopt").forEach(function (x) {
+                x.disabled = true;
+                if (+x.dataset.i === q.c) x.classList.add("ok");
+              });
+              if (!ok) b.classList.add("no");
+              $(".qn", qb).textContent = (ok ? "Yes! " : "Not quite. ") + q.n;
+              $(".qnext", qb).hidden = false;
+            };
+          });
+          $(".qnext", qb).onclick = function () {
+            qi++;
+            ask();
+          };
+        }
+        ask();
+
+        /* --- gallery: shuffle + slideshow --- */
+        $("#shuf").onclick = function () {
+          var g = $(".grid"),
+            f = $$(".ph");
+          for (var i = f.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = f[i];
+            f[i] = f[j];
+            f[j] = t;
+          }
+          f.forEach(function (p) {
+            g.appendChild(p);
+          });
+        };
+        var timer;
+        $("#play").onclick = function () {
+          var first = $$(".ph").filter(function (p) {
+              return $("img", p);
+            })[0],
+            msg = $("#gmsg");
+          if (!first) {
+            msg.textContent = "Add photos to play the slideshow";
+            return;
+          }
+          msg.textContent = "";
+          first.click();
+          clearInterval(timer);
+          timer = setInterval(function () {
+            var lb = $("#lb");
+            if (lb.hidden) {
+              clearInterval(timer);
+            } else $(".lbn", lb).click();
+          }, 3000);
+        };
+
+        /* --- press and hold heart --- */
+        var hold = $("#hold"),
+          hh = $("#hh"),
+          raf,
+          t0,
+          done = false;
+        function frame(now) {
+          var p = Math.min((now - t0) / 1600, 1);
+          hold.style.setProperty("--p", p);
+          if (p >= 1) {
+            done = true;
+            hold.classList.remove("on");
+            hh.textContent = HOLD_MESSAGE;
+            var r = hold.getBoundingClientRect();
+            hearts(32, r.left + r.width / 2, r.top, 300);
+            return;
+          }
+          raf = requestAnimationFrame(frame);
+        }
+        function start() {
+          if (done) return;
+          hold.classList.add("on");
+          t0 = performance.now();
+          raf = requestAnimationFrame(frame);
+        }
+        function stop() {
+          if (done) return;
+          cancelAnimationFrame(raf);
+          hold.classList.remove("on");
+          hold.style.setProperty("--p", 0);
+        }
+        hold.addEventListener("pointerdown", function (e) {
+          e.preventDefault();
+          start();
+        });
+        ["pointerup", "pointerleave", "pointercancel", "blur"].forEach(
+          function (ev) {
+            hold.addEventListener(ev, stop);
+          },
+        );
+        hold.addEventListener("keydown", function (e) {
+          if ((e.key === "Enter" || e.key === " ") && !e.repeat) {
+            e.preventDefault();
+            start();
+          }
+        });
+        hold.addEventListener("keyup", stop);
+      })();
+    </script>
+  </body>
+</html>
